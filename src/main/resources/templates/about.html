@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        About Us | Adinath Dental | Eye Care Clinic
+    </title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+    <link rel="stylesheet"
+          th:href="@{/css/about.css}">
+
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<section class="about-shloka-section">
+
+    <div class="container">
+
+        <div class="about-shloka-card">
+
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div class="lotus-divider">
+
+                <img src="/images/lotus-left.svg"
+                     alt="Lotus"
+                     class="lotus-img">
+
+                <div class="om-symbol">
+                    ॐ
+                </div>
+
+                <img src="/images/lotus-right.svg"
+                     alt="Lotus"
+                     class="lotus-img">
+
+            </div>
+
+            <h2>
+                शरीरमाद्यं खलु धर्मसाधनम्
+            </h2>
+
+            <p class="shloka-hindi">
+                स्वस्थ शरीर जीवन के प्रत्येक कार्य का आधार है।
+            </p>
+
+            <p class="shloka-english">
+                A healthy body is the foundation of every meaningful pursuit in life.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about-hero-section">
+
+    <div class="container">
+
+        <div class="about-hero-content">
+
+            <div class="about-hero-text">
+
+                <span class="about-label">
+                    ABOUT ADINATH
+                </span>
+
+                <h2>
+                    Trusted Care.<br>
+                    Modern Treatment.<br>
+                    Healthier Lives.
+                </h2>
+
+                <p>
+                    At Adinath Dental | Eye Care Clinic, we are committed
+                    to providing comprehensive healthcare through
+                    professional dental care, advanced eye care services,
+                    modern technology and a patient-first approach.
+                </p>
+
+
+
+            </div>
+
+            <div class="about-hero-image-wrapper">
+
+                <div class="hero-frame">
+
+                    <img src="/images/adinath-reception.webp"
+                         alt="Adinath Clinic Reception">
+
+                </div>
+
+              
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="journey-section">
+
+    <div class="container">
+
+        <div class="journey-header">
+
+            <span class="journey-label">
+                OUR JOURNEY
+            </span>
+
+            <h2>
+                Building Trust Through
+                Quality Healthcare
+            </h2>
+
+        </div>
+
+        <div class="journey-timeline">
+
+            <div class="journey-item">
+
+                <div class="journey-circle patients-circle">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <h3>
+                    1000+
+                </h3>
+
+                <p>
+                    Patients Served
+                </p>
+
+            </div>
+
+            <div class="journey-item">
+
+                <div class="journey-circle eye-circle">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </div>
+
+                <h3>
+                    Eye Care
+                </h3>
+
+                <p>
+                    Professional Vision Services
+                </p>
+
+            </div>
+
+            <div class="journey-item">
+
+                <div class="journey-circle dental-circle">
+
+                    <i class="fa-solid fa-tooth"></i>
+
+                </div>
+
+                <h3>
+                    Dental Care
+                </h3>
+
+                <p>
+                    Modern Dental Solutions
+                </p>
+
+            </div>
+
+            <div class="journey-item">
+
+                <div class="journey-circle tech-circle">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                </div>
+
+                <h3>
+                    Technology
+                </h3>
+
+                <p>
+                    Advanced Healthcare Tools
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="mission-vision-section">
+
+    <div class="mission-vision-wrapper">
+
+       
+        <div class="mission-card">
+
+            <div class="card-header">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Mission</h3>
+            </div>
+
+            <div class="card-body">
+
+                <img src="/images/mission.webp"
+                     alt="Mission Image"
+                     class="mission-image">
+
+                <ul>
+                    <li>To provide Ethical, accessible healthcare.</li>
+                    <li>To provide the safest care.</li>
+                    <li>To ensure patient comfort and trust.</li>
+                    <li>To serve with compassion and integrity.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+            <div class="mission-divider">
+            <span>✦</span>
+        </div>
+
+        <div class="vision-card">
+
+            <div class="card-header">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Vision</h3>
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>To be a trusted healthcare destination.</li>
+                    <li>To improve lives through better vision.</li>
+                    <li>To create healthier smiles.</li>
+                    <li>To deliver future-ready patient care.</li>
+                </ul>
+
+                <img src="/images/vision.webp"
+                     alt="Vision Image"
+                     class="vision-image">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="adinath-philosophy-section">
+    
+    <div class="container">
+
+        <div class="philosophy-header">
+            <span>THE ADINATH PHILOSOPHY</span>
+
+            <div class="philosophy-divider">
+                <span></span>
+                <i class="fas fa-eye"></i>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="philosophy-wrapper">
+
+            <div class="philosophy-side philosophy-left">
+
+                <div class="side-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+
+                <div class="side-content">
+                    <h3>Eye Care</h3>
+
+                    <div class="connector connector-left"></div>
+
+                    <p>
+                        We believe clear vision opens doors to a better life.
+                        Our eye care is built on precision, technology and
+                        genuine care.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="philosophy-center">
+
+                <div class="center-circle">
+
+                    <div class="circle-ring ring-one"></div>
+                    <div class="circle-ring ring-two"></div>
+
+                    <div class="center-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <h3>PATIENT WELLBEING</h3>
+
+                    <p>
+                        Your health, comfort and trust are at the center
+                        of everything we do.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="philosophy-side philosophy-right">
+
+                <div class="side-content">
+
+                    <h3>Dental Care</h3>
+
+                    <div class="connector connector-right"></div>
+
+                    <p>
+                        We believe a healthy smile builds confidence and
+                        wellbeing. Our dental care focuses on painless,
+                        advanced and preventive treatments.
+                    </p>
+
+                </div>
+
+                <div class="side-icon dental-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="philosophy-wave philosophy-wave-left"></div>
+        <div class="philosophy-wave philosophy-wave-right"></div>
+
+    </div>
+
+</section>
+<section class="trust-section">
+
+    <div class="container">
+
+        <div class="trust-header">
+
+            <span>WHY FAMILIES TRUST US</span>
+
+            <div class="trust-divider">
+                <span></span>
+                <i class="fas fa-shield-heart"></i>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="trust-grid">
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h3>16+</h3>
+
+                    <h4>Years of Trust</h4>
+
+                    <p>
+                        Experienced. Reliable.
+                        Always committed to patient care.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h3>Patient First</h3>
+
+                    <h4>Focused Care</h4>
+
+                    <p>
+                        Every smile, every vision,
+                        every patient matters.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h3>Modern Equipment</h3>
+
+                    <h4>Advanced Technology</h4>
+
+                    <p>
+                        Precision diagnostics
+                        for accurate treatment.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="trust-card">
+
+                <div class="trust-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+
+                <div class="trust-content">
+
+                    <h3>Ethical | Transparent</h3>
+
+                    <h4>Honest Guidance</h4>
+
+                    <p>
+                        Clear communication and
+                        complete treatment transparency.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <div class="cta-icon">
+
+                <div class="cta-icon-circle">
+                    <i class="fas fa-notes-medical"></i>
+                </div>
+
+            </div>
+
+            <div class="cta-content">
+
+                <h2>
+                    Ready To Experience
+                    Trusted Healthcare?
+                </h2>
+
+                <p>
+                    Book your appointment today and take the first step
+                    toward better vision and a healthier smile.
+                </p>
+
+            </div>
+
+            <div class="cta-star">
+                ✦
+            </div>
+
+            <div class="cta-action">
+
+                <a href="/appointment" class="cta-btn">
+                        Book Appointment
+                    <i class="fas fa-arrow-right"></i></a>
+             
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

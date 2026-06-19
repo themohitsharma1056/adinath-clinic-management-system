@@ -1,9 +1,581 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>Adinath Clinic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adinath Healthcare Center</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
+
 <body>
-    <h1>Adinath Clinic Management System</h1>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<section class="shloka-section">
+
+
+<div class="container">
+
+    <div class="shloka-card">
+
+    <div class="om-divider">
+    <span></span>
+    <div class="om-symbol">ॐ</div>
+    <span></span>
+</div>
+
+<h2>
+    सर्वे भवन्तु सुखिनः ।
+    <br>
+    सर्वे सन्तु निरामयाः ॥
+</h2>
+
+<div class="meaning-grid">
+
+    <div>
+        <p class="hindi-line">
+            सभी सुखी रहें,
+            <br>
+            सभी निरोग रहें।
+        </p>
+    </div>
+
+    <div>
+        <p class="english-line">
+            May all be healthy
+            <br>
+            and free from illness.
+        </p>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+
+</section>
+<section class="clinic-section">
+
+    <div class="container">
+
+        <div class="clinic-wrapper">
+
+            <div class="clinic-content">
+
+               <span class="section-tag">
+    WELCOME TO
+       </span>
+
+       <h2 class="clinic-title">
+          Adinath
+        </h2>
+
+          <p class="clinic-type">
+               Eye Care | Dental Clinic
+          </p>
+
+                <p class="clinic-subtitle">
+                    Better Vision. Healthy Smile.
+                    <br>
+                    Compassionate Care.
+                </p>
+
+                <p class="clinic-description">
+
+                    Providing trusted eye care, dental treatment,
+                    and optometry services in Bhawani Mandi with
+                    modern equipment, experienced professionals,
+                    and patient-focused care.
+
+                </p>
+
+                <div class="clinic-features">
+
+                    <div class="feature-item">
+                        ✓ Eye Testing | Vision Care
+                    </div>
+
+                    <div class="feature-item">
+                        ✓ Dental Treatment | Oral Care
+                    </div>
+
+                    <div class="feature-item">
+                        ✓ Contact Lens | Optical Services
+                    </div>
+
+                    <div class="feature-item">
+                        ✓ Braces | Teeth Alignment
+                    </div>
+
+                </div>
+
+                <div class="clinic-buttons">
+
+                    <a
+                        th:href="@{/appointment}"
+                        class="primary-btn">
+
+                        Book Appointment
+
+                    </a>
+
+                    <a
+                        href="tel:+919588900642"
+                        class="secondary-btn">
+
+                        Call Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="clinic-image">
+
+                <img
+                    src="/images/adinath-building.webp"
+                    alt="Adinath Eye Care and Dental Clinic">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="services-section">
+
+    <div class="container">
+
+        <div class="services-grid">
+
+            <div class="service-card eye-card">
+
+                <h3 class="service-title">EYE CARE</h3>
+
+                <div class="service-body">
+
+                    <div class="service-icon">
+                        <div class="icon-ring eye-ring">
+                            <img src="/images/eye-logo.svg" alt="Eye Care">
+                        </div>
+                    </div>
+
+                    <ul class="service-list">
+                        <li>Comprehensive Eye Testing</li>
+                        <li>Contact Lens Services</li>
+                        <li>Vision Therapy</li>
+                        <li>Cataract | Glaucoma Screening</li>
+                        <li>Eyeglasses | Optical Services</li>
+                    </ul>
+
+                </div>
+
+                <a href="/doctors#eye-care" class="service-link eye-link">
+                    View Eye Care →
+                </a>
+
+            </div>
+
+            <div class="service-card dental-card">
+
+                <h3 class="service-title">DENTAL CARE</h3>
+
+                <div class="service-body">
+
+                    <div class="service-icon">
+                        <div class="icon-ring dental-ring">
+                            <img src="/images/tooth-logo.svg" alt="Dental Care">
+                        </div>
+                    </div>
+
+                    <ul class="service-list">
+                        <li>Digital Dental X-Ray</li>
+                        <li>Tooth Extraction</li>
+                        <li>Crowns | Caps</li>
+                        <li>Artificial Teeth | Dentures</li>
+                        <li>Braces | Teeth Alignment</li>
+                    </ul>
+
+                </div>
+
+                <a href="/doctors#dental-care" class="service-link dental-link">
+                    View Dental Care →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="why-section">
+
+    <div class="container">
+
+        <div class="why-header">
+
+            <p class="why-sanskrit">
+                सेवा परमो धर्मः
+            </p>
+
+            <h2>
+                Why Choose Adinath Clinic
+            </h2>
+
+            <p>
+                Trusted healthcare with experience, technology and patient-focused care.
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon experience-icon">
+
+                    <img
+                        src="/images/badge-icon.svg"
+                        alt="Experience">
+
+                </div>
+
+                <h3>
+                    16+ Years Experience
+                </h3>
+
+                <p>
+                    Trusted care for generations of patients.
+                </p>
+
+                <div class="why-line"></div>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon technology-icon">
+
+                    <img
+                        src="/images/microscope-icon.svg"
+                        alt="Technology">
+
+                </div>
+
+                <h3>
+                    Advanced Technology
+                </h3>
+
+                <p>
+                    Modern diagnostic and treatment equipment.
+                </p>
+
+                <div class="why-line"></div>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon specialist-icon">
+
+                    <img
+                        src="/images/doctor-icon.svg"
+                        alt="Specialists">
+
+                </div>
+
+                <h3>
+                    Experienced Specialists
+                </h3>
+
+                <p>
+                    Dedicated eye and dental care experts.
+                </p>
+
+                <div class="why-line"></div>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon care-icon">
+
+                    <img
+                        src="/images/heart-care.svg"
+                        alt="Patient Care">
+
+                </div>
+
+                <h3>
+                    Patient-First Care
+                </h3>
+
+                <p>
+                    Comfortable, ethical and personalized treatment.
+                </p>
+
+                <div class="why-line"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="doctors-section">
+
+    <div class="container">
+
+        <div class="doctors-header">
+
+            <p class="doctors-sanskrit">
+                वैद्यो नारायणो हरिः
+            </p>
+
+            <h2>
+                Our Medical Team
+            </h2>
+
+            <p>
+                Experienced professionals dedicated to eye care, dental care and patient well-being.
+            </p>
+
+        </div>
+
+        <div class="doctors-grid">
+
+            <div class="doctor-card dental-card">
+
+                <div class="doctor-image-wrapper">
+
+                    <img
+                        src="/images/rajkumar-profile.webp"
+                        alt="Dr. Rajkumar Sharma">
+
+                </div>
+
+                <div class="doctor-info">
+
+                    <span class="doctor-badge dental-badge">
+                        Dental Care
+                    </span>
+
+                    <h3>
+                        Dr. Rajkumar Sharma
+                    </h3>
+
+                    <p class="doctor-role">
+                        General Dentist
+                    </p>
+
+                    <p class="doctor-qualification">
+                          DODH Oral Health
+                    </p>
+
+                    <p class="doctor-experience">
+                        16+ Years Experience
+                    </p>
+
+                </div>
+
+                <div class="doctor-scan-line"></div>
+
+            </div>
+
+            <div class="doctor-card eye-card">
+
+                <div class="doctor-image-wrapper">
+
+                    <img
+                        src="/images/harsh-profile.webp"
+                        alt="Harsh Sharma">
+
+                </div>
+
+                <div class="doctor-info">
+
+                    <span class="doctor-badge eye-badge">
+                        Eye Care
+                    </span>
+
+                    <h3>
+                       Dr. Harsh Sharma
+                    </h3>
+
+                    <p class="doctor-role">
+                        Optometrist
+                    </p>
+
+                    <p class="doctor-qualification">
+                        B.Optom | D.Optom
+                    </p>
+
+                    <p class="doctor-experience">
+                        5+ Years Experience
+                    </p>
+
+                </div>
+
+                <div class="doctor-scan-line"></div>
+
+            </div>
+
+     <div class="doctor-card view-all-card">
+
+    <span class="team-label">
+        VISITING SPECIALIST
+    </span>
+
+    <h3>
+        Specialist Consultation
+    </h3>
+
+    <a th:href="@{/doctors}" class="view-link">
+        Learn More →
+    </a>
+
+</div>
+</div>
+
+    </div>
+
+</section>
+<section class="appointment-cta">
+
+    <div class="appointment-content">
+
+        <div class="appointment-left">
+
+            <div class="appointment-icon">
+             <i class="fa-regular fa-calendar-days"></i>
+            </div>
+
+            <div class="appointment-text">
+
+                <h3>
+                    Book Your Appointment Today
+                </h3>
+
+                <p>
+                    Take the first step towards healthy vision and a beautiful smile.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="appointment-right">
+
+            <a th:href="@{/appointment}" class="appointment-btn">
+                Book Now →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="contact-preview-section">
+
+    <div class="contact-preview-container">
+
+        <div class="contact-item location-item">
+
+            <a href="https://maps.app.goo.gl/jQcCGb2K9KEruPxT8"
+               target="_blank"
+               class="contact-icon">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+            </a>
+
+            <div class="contact-content">
+
+                <h3>
+                    Our Location
+                </h3>
+
+                <p>
+                    Behind Patidar Paints,<br>
+                    Shrinathpuram Colony,<br>
+                    Bhawani Mandi, Rajasthan
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="contact-divider"></div>
+
+        <div class="contact-item call-item">
+
+            <a href="tel:9829185419"
+               class="contact-icon">
+
+                <i class="fa-solid fa-phone"></i>
+
+            </a>
+
+            <div class="contact-content">
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+                    <a href="tel:9829185419">
+                        +91 9829185419
+                    </a>
+                    <br>
+
+                    <a href="tel:9588900642">
+                        +91 9588900642
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="contact-divider"></div>
+
+        <div class="contact-item hours-item">
+
+            <div class="contact-icon">
+
+                <i class="fa-regular fa-clock"></i>
+
+            </div>
+
+            <div class="contact-content">
+
+                <h3>
+                    Open Hours
+                </h3>
+
+                <p>
+                    Mon - Sat: 10:00 AM - 8:00 PM
+                    <br>
+                    Sunday: 10:00 AM - 5:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<div th:replace="~{fragments/footer :: footer}"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

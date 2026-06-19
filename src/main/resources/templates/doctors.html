@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Adinath Dental | Eye Care Clinic</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"  th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/doctors.css}">
+
+</head>
+
+<body>
+
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+<section class="doctor-shloka">
+
+    <div class="doctor-shloka-card">
+
+        <div class="trident-divider">
+
+                <img src="/images/trident.svg"
+                     alt="trident"
+                     class="trident-img">
+</div>
+        <h2 class="shloka-text">
+           वैद्यो नारायणो हरिः ॥
+        </h2>
+
+        <p class="shloka-hindi">
+            चिकित्सक रोगियों के लिए ईश्वर के समान कल्याणकारी होता है।
+        </p>
+
+        <p class="shloka-english">
+          A healer serves as a source of care, hope and well-being.
+        </p>
+
+    </div>
+
+</section>
+<section class="doctors-banner">
+    <div class="doctors-banner-content">
+
+        <span class="banner-subtitle">
+            MEET THE PROFESSIONALS BEHIND
+        </span>
+
+        <h2>
+            Adinath <span>Healthcare</span>
+        </h2>
+
+        <div class="banner-line"></div>
+
+    </div>
+</section>
+<section id="dental-care" class="doctor-intro-section">
+
+    <div class="doctor-intro-card">
+
+      <div class="doctor-image-side">
+
+    <div class="doctor-image-wrapper">
+        <img src="/images/doctors/dr-rajkumar-profile.webp"
+             alt="Dr Rajkumar Sharma">
+
+        <div class="doctor-floating-icon">
+            <i class="fa-solid fa-tooth"></i>
+        </div>
+    </div>
+
+</div>
+
+        <div class="doctor-info-side">
+
+            <h2 class="doctor-name">
+                Dr. Rajkumar Sharma
+            </h2>
+
+            <h3 class="doctor-role">
+                Founder | Chief Dental Consultant
+            </h3>
+
+            <p class="doctor-speciality">
+                General Dentist
+            </p>
+
+            <ul class="doctor-achievements">
+
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    16+ Years Experience
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    DODH Oral Health
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    State Level Tobacco Free Rajasthan
+                </li>
+
+            </ul>
+
+        </div>
+
+       
+        <div class="legacy-highlights">
+
+            <div class="legacy-header">
+                Legacy Highlights
+            </div>
+
+            <div class="legacy-grid">
+
+                <div class="legacy-item">
+                    <h4>16+</h4>
+                    <span>Years of Experience</span>
+                </div>
+
+                <div class="legacy-item">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>State Level Recognition</span>
+                </div>
+
+                <div class="legacy-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Community Service</span>
+                </div>
+
+                <div class="legacy-item">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Patient First  Care</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="dental-spectrum-section">
+
+    <div class="dental-spectrum-container">
+
+        <div class="spectrum-heading">
+
+            <span></span>
+
+            <h2>Dental Care Spectrum</h2>
+
+            <span></span>
+
+        </div>
+
+        <div class="services-track">
+
+            <div class="service-node">
+               <div class="service-icon">
+    <img src="/images/doctors/services/dental-checkup.svg"
+         alt="Dental Checkup">
+        </div>
+                <p>Dental Checkup</p>
+            </div>
+
+            <div class="service-node">
+                  <div class="service-icon">
+    <img src="/images/doctors/services/cleaning.svg"
+         alt=" Cleaning">
+        </div>
+                <p>Scaling <br> Cleaning</p>
+            </div>
+
+            <div class="service-node">
+                   <div class="service-icon">
+    <img src="/images/doctors/services/root-canal.svg"
+         alt="Root Canal">
+        </div>
+                <p>Root Canal Treatment</p>
+            </div>
+
+            <div class="service-node">
+                     <div class="service-icon">
+    <img src="/images/doctors/services/dental-extraction.svg"
+         alt="Dental Extraction">
+        </div>
+                <p>Dental Extraction</p>
+            </div>
+
+            <div class="service-node">
+                           <div class="service-icon">
+    <img src="/images/doctors/services/denturus.svg"
+         alt="Dentures">
+        </div>
+                <p>Dentures</p>
+            </div>
+
+            <div class="service-node">
+          <div class="service-icon">
+    <img src="/images/doctors/services/caps.svg"
+         alt="Caps">
+        </div>
+                <p>Caps | Crowns</p>
+            </div>
+
+            <div class="service-node">
+                 <div class="service-icon">
+    <img src="/images/doctors/services/bridges.svg"
+         alt="Bridges">
+        </div>
+                <p>Bridges</p>
+            </div>
+
+            <div class="service-node">
+                 <div class="service-icon">
+    <img src="/images/doctors/services/gum-treat.svg"
+         alt="Gum Treatment">
+        </div>
+                <p>Gum Treatment</p>
+            </div>
+
+            <div class="service-node">
+                  <div class="service-icon">
+    <img src="/images/doctors/services/restoration.svg"
+         alt="Smile Restoration">
+        </div>
+                <p>Smile Restoration</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="rajkumar-recognition-section">
+
+    <div class="recognition-card">
+
+
+        <div class="recognition-orbit-area">
+
+            <div class="orbit-container">
+
+                <div class="orbit-ring"></div>
+
+                <div class="orbit-node orbit-top"
+                     data-certificate="/images/doctors/tabbaco-free.webp">
+
+                    <div class="node-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <span>
+                        Tobacco Free<br>
+                        Rajasthan
+                    </span>
+
+                </div>
+
+
+                <div class="orbit-node orbit-left"
+                     data-certificate="/images/doctors/best-employe.webp">
+
+                    <div class="node-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <span>
+                        Best<br>
+                        Employee
+                    </span>
+
+                </div>
+
+
+                <div class="orbit-node orbit-right"
+                     data-certificate="/images/doctors/state-tabbaco.webp">
+
+                    <div class="node-icon blue-node">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <span>
+                        State Workshop<br>
+                        Recognition
+                    </span>
+
+                </div>
+
+               
+                <div class="orbit-center">
+
+                    <img src="/images/doctors/rajkumar-profile.webp"
+                         alt="Dr Rajkumar Sharma">
+
+                    <h3>
+                        Dr. Rajkumar<br>
+                        Sharma
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+   
+
+      <div class="certificate-viewer">
+
+    <div class="certificate-frame">
+
+        <button class="certificate-prev" onclick="previousCertificate()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <img id="activeCertificate"
+             src="/images/doctors/tabbaco-free.webp"
+             alt="Recognition Certificate">
+
+        <button class="certificate-next" onclick="nextCertificate()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</div>
+    </div>
+
+</section>
+<section class="dental-gallery-section">
+
+    <div class="gallery-heading">
+        <h2>Dental Practice Gallery</h2>
+    </div>
+
+    <div class="gallery-strip">
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/dental-inst (1).webp"
+                 alt="Dental Practice">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/dental-inst (2).webp"
+                 alt="Dental Practice">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/rajkumar-works.webp"
+                 alt="Dental Practice">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/rajkumar-work.webp"
+                 alt="Dental Practice">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/dental-inst (3).webp"
+                 alt="Dental Practice">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/work-.webp"
+                 alt="Dental Practice">
+        </div>
+
+    </div>
+
+</section>
+<section id="eye-care" class="harsh-intro-section">
+
+    <div class="harsh-intro-card">
+
+        <div class="harsh-image-side">
+
+            <div class="harsh-image-wrapper">
+
+                <img src="/images/doctors/harsh-profile-img.webp"
+                     alt="Harsh Sharma">
+
+                <div class="harsh-floating-icon">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="harsh-info-side">
+
+            <h2 class="harsh-name">
+                Dr.Harsh Sharma
+            </h2>
+
+            <h3 class="harsh-role">
+                Lead Optometrist
+            </h3>
+
+            <p class="harsh-speciality">
+                B.Optom | D.Optom
+            </p>
+
+            <ul class="harsh-achievements">
+
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    Member of Ocularist Society of India
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    Member of Optometry Confederation of India
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                     Certified Boston Scleral Contact Lens Specialist
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="legacy-highlights harsh-highlights">
+
+    <div class="legacy-header">
+        Professional Highlights
+    </div>
+
+    <div class="legacy-grid">
+
+                <div class="legacy-item">
+                    <h4>5+</h4>
+                    <span>Years Experience</span>
+                </div>
+
+                <div class="legacy-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>B.Optom Qualification</span>
+                </div>
+
+                <div class="legacy-item">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>Boston Scleral Lens Certified</span>
+                </div>
+
+                <div class="legacy-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>OCI Member</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="vision-services-section">
+
+    <div class="section-title">
+        <h2>Vision Care Services</h2>
+    </div>
+
+  <div class="vision-services-grid">
+
+    <div class="vision-service dry-eye">
+        <i class="fas fa-tint"></i>
+        <span>Dry Eye Management</span>
+    </div>
+
+    <div class="vision-service contact-lens">
+        <i class="fas fa-circle-dot"></i>
+        <span>Contact Lens | Scleral Lens</span>
+    </div>
+
+    <div class="vision-service optical">
+        <i class="fas fa-glasses"></i>
+        <span>Optical Services</span>
+    </div>
+
+    <div class="vision-service cataract">
+        <i class="fas fa-search"></i>
+        <span>Cataract Screening</span>
+    </div>
+
+    <div class="vision-service therapy">
+        <i class="fas fa-brain"></i>
+        <span>Vision Therapy</span>
+    </div>
+
+    <div class="vision-service glaucoma">
+        <i class="fas fa-eye"></i>
+        <span>Glaucoma Screening</span>
+    </div>
+
+</div>
+
+</section>
+<section class="harsh-credential-section">
+<div class="harsh-certificate-panel">
+    <div class="harsh-credential-layout">
+
+        <div class="credential-constellation">
+
+            <div class="credential-center">
+                <img src="/images/doctors/harsh-img(1).webp" alt="Dr Harsh Sharma">
+                <h4>Dr.Harsh </h4>
+            </div>
+
+            <button class="credential-node internship"
+                onclick="showHarshCertificate(1)">
+                Internship<br>Certificate
+            </button>
+
+            <button class="credential-node drop"
+                onclick="showHarshCertificate(0)">
+                DROP<br>Project
+            </button>
+
+            <button class="credential-node mega"
+                onclick="showHarshCertificate(2)">
+                Mega Eye<br>Camp
+            </button>
+
+            <button class="credential-node registration"
+                onclick="showHarshCertificate(4)">
+                Registration<br>Certificate
+            </button>
+
+            <button class="credential-node retina"
+                onclick="showHarshCertificate(5)">
+                Retina<br>Training
+            </button>
+
+            <button class="credential-node scleral"
+                onclick="showHarshCertificate(6)">
+                Scleral Lens<br>Certification
+            </button>
+
+            <button class="credential-node ocularist"
+                onclick="showHarshCertificate(3)">
+                Ocularist<br>Society
+            </button>
+
+        </div>
+
+        <div class="certificate-viewer">
+
+            <button class="certificate-prev"
+                onclick="previousHarshCertificate()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="certificate-frame">
+                <img id="harshCertificateImage"
+                     src="/images/doctors/harsh-certificates/drop-projet.webp"
+                     alt="Certificate">
+            </div>
+
+            <button class="certificate-next"
+                onclick="nextHarshCertificate()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+</div>
+</section>
+<section class="vision-gallery-section">
+
+    <div class="gallery-heading">
+        <h2>Vision Care In Practice</h2>
+    </div>
+
+    <div class="gallery-strip">
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/harsh-work (5).webp"
+                 alt="Eye Care Clinic">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/harsh-img.webp"
+                 alt="Professional Recognition">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/harsh-work (1).webp"
+                 alt="Computerized Eye Testing">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/harsh-work (2).webp"
+                 alt="Patient Consultation">
+        </div>
+
+        <div class="gallery-card">
+            
+            <img src="/images/doctors/work/harsh-img(3).webp"
+                 alt="Vision Assessment">
+        </div>
+
+        <div class="gallery-card">
+            
+            <img src="/images/doctors/work/harsh-work (4).webp"
+                 alt="Slit Lamp Examination">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/harsh-work (6).webp"
+                 alt="Eye Screening">
+        </div>
+
+        <div class="gallery-card">
+            <img src="/images/doctors/work/harsh-work (7).webp"
+                 alt="Optometry Practice">
+        </div>
+
+    </div>
+
+</section>
+<section class="sandeep-section">
+
+    <div class="sandeep-card">
+
+        <div class="sandeep-photo">
+            <img src="/images/doctors/dr-sandeep.webp"
+                 alt="Dr. Sandeep Shrivastav">
+        </div>
+
+        <div class="sandeep-info">
+
+            <h3>Dr. Sandeep Shrivastav</h3>
+
+            <p class="qualification">
+                B.D.S., M.D.S. (Orthodontics)
+            </p>
+
+            <p class="experience">
+                16+ Years Experience
+            </p>
+
+            <div class="specialist-badge">
+                <i class="fa-solid fa-user-doctor"></i>
+                Visiting Orthodontic Specialist
+            </div>
+
+            <div class="availability-box">
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <div>
+                    <strong>Available</strong>
+                    <span>3rd Week Saturday or Sunday Every Month</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sandeep-services">
+
+            <div class="service-item">
+                <i class="fa-solid fa-teeth"></i>
+                <span>Teeth Alignment</span>
+            </div>
+
+            <div class="service-item">
+                <i class="fa-solid fa-link"></i>
+                <span>Braces</span>
+            </div>
+
+            <div class="service-item">
+                <i class="fa-regular fa-face-smile"></i>
+                <span>Smile Correction</span>
+            </div>
+
+            <div class="service-item">
+                <i class="fa-solid fa-arrows-left-right-to-line"></i>
+                <span>Bite Correction</span>
+            </div>
+
+            <div class="service-item">
+                <i class="fa-solid fa-tooth"></i>
+                <span>Gap Closure</span>
+            </div>
+
+            <div class="service-item">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Crooked Teeth Treatment</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="vision-outreach-section">
+
+    <div class="vision-outreach-header">
+        <h2>Community Vision Outreach</h2>
+        <p>Bringing quality eye care closer to every community.</p>
+    </div>
+
+    <div class="outreach-top">
+
+        <div class="active-camp-card">
+
+            <span class="active-badge">
+                <i class="fa-solid fa-circle"></i>
+                ACTIVE CAMP
+            </span>
+
+            <div class="active-content">
+
+                <div class="active-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="active-details">
+
+                    <h3>Free Eye Care Consultation Camp</h3>
+
+                    <p>
+                        <i class="fa-regular fa-calendar"></i>
+                        Every Thursday
+                    </p>
+
+                    <p>
+                        <i class="fa-regular fa-clock"></i>
+                        11:00 AM – 3:00 PM
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Behind Government Hospital,<br>
+                        Near Dr. K. K. Soni Hospital Area,<br>
+                        Sunel, Rajasthan
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="camp-services-card">
+
+            <h3>Camp Services</h3>
+
+            <div class="services-grid">
+
+                <div class="service-box">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>Computerized Eye Testing</span>
+                </div>
+
+                <div class="service-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Retina Examination</span>
+                </div>
+
+                <div class="service-box">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <span>Cataract Screening</span>
+                </div>
+
+                <div class="service-box">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <span>Vision Assessment</span>
+                </div>
+
+                <div class="service-box">
+                    <i class="fa-solid fa-glasses"></i>
+                    <span>Contact Lens Consultation</span>
+                </div>
+
+                <div class="service-box">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Vision Therapy Guidance</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="past-camp-card">
+
+        <span class="past-badge">
+            <i class="fa-solid fa-circle-check"></i>
+            COMPLETED OUTREACH
+        </span>
+
+        <div class="past-grid">
+
+            <div class="past-item clinic-name">
+                <div class="past-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h4>Shri Shyam Clinic, Dug</h4>
+            </div>
+
+            <div class="past-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>2nd | 4th Monday</span>
+            </div>
+
+            <div class="past-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>11:00 AM – 3:00 PM</span>
+            </div>
+
+            <div class="past-item">
+                Successfully conducted community eye consultation camps and awareness programs.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="adinath-gallery-section">
+
+    <div class="gallery-heading">
+        <h2>Moments of Adinath</h2>
+        <p>
+            Capturing care, community, vision and the journey of Adinath.
+        </p>
+    </div>
+
+    <div class="adinath-gallery-strip">
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/machine.webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/camp (3).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/clinic (3).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/camp (2).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/camp (1).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/camp (5).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/clinic (1).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/harsh-work (4).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/camp (4).webp}" alt="">
+        </div>
+
+        <div class="gallery-card">
+            <img th:src="@{/images/doctors/camp/clinic (2).webp}" alt="">
+        </div>
+
+    </div>
+
+</section>
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+const certificates = [
+    "/images/doctors/tabbaco-free.webp",
+    "/images/doctors/best-employe.webp",
+    "/images/doctors/state-tabbaco.webp"
+];
+
+let currentCertificate = 0;
+
+const certificateImage =
+document.getElementById("activeCertificate");
+
+function updateCertificate(){
+    certificateImage.src =
+    certificates[currentCertificate];
+}
+
+function nextCertificate(){
+    currentCertificate =
+    (currentCertificate + 1) % certificates.length;
+
+    updateCertificate();
+}
+
+function previousCertificate(){
+    currentCertificate =
+    (currentCertificate - 1 + certificates.length)
+    % certificates.length;
+
+    updateCertificate();
+}
+
+document
+.querySelectorAll(".orbit-node")
+.forEach((node,index)=>{
+
+    node.addEventListener("click",()=>{
+
+        currentCertificate = index;
+
+        updateCertificate();
+    });
+
+});
+
+const harshCertificates = [
+	 "/images/doctors/harsh-certificates/drop-projet.webp",
+	 "/images/doctors/harsh-certificates/internship-certificate.webp",
+	 "/images/doctors/harsh-certificates/mega-eye camp.webp",
+	 "/images/doctors/harsh-certificates/oculariest-socity.webp",
+	 "/images/doctors/harsh-certificates/ragistration-certificate.webp",
+	 "/images/doctors/harsh-certificates/retina-tranning.webp",
+	 "/images/doctors/harsh-certificates/scleral-certificate.webp"
+	];
+
+	let currentHarshCertificate = 0;
+
+	function updateHarshCertificate(){
+	    document.getElementById("harshCertificateImage").src =
+	    harshCertificates[currentHarshCertificate];
+	}
+
+	function showHarshCertificate(index){
+	    currentHarshCertificate = index;
+	    updateHarshCertificate();
+	}
+
+	function nextHarshCertificate(){
+	    currentHarshCertificate =
+	    (currentHarshCertificate + 1) % harshCertificates.length;
+
+	    updateHarshCertificate();
+	}
+
+	function previousHarshCertificate(){
+	    currentHarshCertificate =
+	    (currentHarshCertificate - 1 + harshCertificates.length) %
+	    harshCertificates.length;
+
+	    updateHarshCertificate();
+	}
+
+</script>
+
+</body>
+
+</html>
