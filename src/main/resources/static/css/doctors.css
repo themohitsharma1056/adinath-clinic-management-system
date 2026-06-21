@@ -1,53 +1,54 @@
 .doctor-shloka{
-    padding:4px 14px 8px;
-    background:#ffffff;
+    background:#FAF8F3;
+    padding:4px 14px 10px;
 }
 
 .doctor-shloka-card{
-    max-width:1600px;
+    position:relative;
+    max-width:1450px;
     margin:0 auto;
 
-    padding:32px 24px;
+    background:#FFFDF8;
+    border:1px solid #D4AF37;
 
-    border-radius:12px;
-    background:#faf6ef;
-    border:1px solid #e6d7ba;
-    
+    padding:30px 20px;
 
     text-align:center;
+    overflow:hidden;
 }
 .trident-divider{
-    display:raw;
+    display:flex;
     align-items:center;
     justify-content:center;
-    gap:2px;
-   
+    margin-bottom:25px;
 }
 
 .trident-img{
-    width:60px;
-    height:70px;
+    width:90px;
+    height:auto;
 }
 
-
 .shloka-text{
-     font-size:2.9rem;
+    font-size:3rem;
     font-weight:600;
     color:#6B4E2E;
     margin-bottom:15px;
 }
 
 .shloka-hindi{
-  font-size:1.3rem;
+    font-size:1.3rem;
     color:#4F463D;
     margin-bottom:12px;
 }
 
 .shloka-english{
-     font-size:1.1rem;
+    font-size:1.1rem;
     color:#555;
     margin:0;
 }
+
+
+
 .doctors-banner{
     background: #ffffff;
     padding: 10px 0 2px;
@@ -1419,7 +1420,29 @@
 
 @media (min-width:768px) and (max-width:1059px){
 
+ .doctor-shloka{
+        padding:4px 12px 10px;
+    }
 
+    .doctor-shloka-card{
+        padding:28px 18px;
+    }
+
+    .trident-img{
+        width:75px;
+    }
+
+    .shloka-text{
+        font-size:2.4rem;
+    }
+
+    .shloka-hindi{
+        font-size:1.15rem;
+    }
+
+    .shloka-english{
+        font-size:1rem;
+    }
 
 	
     .doctors-banner{
@@ -1745,7 +1768,7 @@
     grid-template-columns:repeat(3,1fr);
 }
 .outreach-top{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr ;
     gap:14px;
 }
 
@@ -1820,7 +1843,9 @@
     font-size:.9rem;
 }
 }
-
+ 
+ 
+ 
 
 
 
@@ -1828,42 +1853,32 @@
 
 @media (max-width:767px){
 
-     .doctor-shloka-section{
-        padding: 4px;
+    .doctor-shloka{
+        padding:4px 8px 8px;
     }
 
     .doctor-shloka-card{
-        padding: 18px 16px;
-        min-height: auto;
-        border-radius: 20px;
-    }
-  .trident-img{
-        width:45px;
-        height:55;
+        padding:24px 14px;
     }
 
-    .doctor-shloka{
-        font-size: 1.4rem;
-        line-height: 1.35;
-        margin-bottom: 10px;
+    .trident-img{
+        width:55px;
     }
-.shloka-text{
-    
-    font-size:2rem;
-     line-height:1.5;
-  
-}
 
-    .doctor-hindi{
-        font-size:.8rem;
+    .shloka-text{
+        font-size:1.8rem;
+        line-height:1.4;
+        margin-bottom:12px;
+    }
+
+    .shloka-hindi{
+        font-size:1rem;
+        margin-bottom:10px;
+    }
+
+    .shloka-english{
+        font-size:.9rem;
         line-height:1.6;
-        margin-bottom:8px;
-    }
-
-    .doctor-english{
-        font-size:.78rem;
-        line-height:1.5;
-       
     }
    
  .doctors-banner{

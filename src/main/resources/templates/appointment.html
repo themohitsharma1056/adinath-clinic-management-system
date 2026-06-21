@@ -17,14 +17,53 @@
           rel="stylesheet">
 
     <link rel="stylesheet"  th:href="@{/css/style.css}">
-     <link rel="stylesheet" th:href="@{/css/appoinment.css}">
+     <link rel="stylesheet" th:href="@{/css/appointment.css}">
 
 </head>
 
 <body>
 
     <div th:replace="~{fragments/navbar :: navbar}"></div>
+<section class="appointment-shloka-section">
 
+    <div class="appointment-shloka-card">
+
+        <span class="corner top-left"></span>
+        <span class="corner top-right"></span>
+        <span class="corner bottom-left"></span>
+        <span class="corner bottom-right"></span>
+
+        <div class="shloka-symbol-wrapper">
+
+            <img src="/images/appointment/healing-kalash.svg"
+                 alt="Healing Symbol"
+                 class="healing-symbol">
+
+        </div>
+
+        <h1 class="appointment-shloka">
+
+            आरोग्यं परमं भाग्यं<br>
+            स्वास्थ्यं सर्वार्थसाधनम् ॥
+
+        </h1>
+
+        <p class="appointment-shloka-hindi">
+
+            अच्छा स्वास्थ्य जीवन का सबसे बड़ा सौभाग्य है।
+
+        </p>
+
+        <p class="appointment-shloka-english">
+
+            Good health is life's greatest blessing and the foundation
+            of every meaningful pursuit.
+
+        </p>
+
+    </div>
+
+</section>
 
 
 
