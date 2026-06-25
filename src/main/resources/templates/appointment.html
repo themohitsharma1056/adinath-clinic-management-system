@@ -64,10 +64,340 @@
     </div>
 
 </section>
+<section class="appointment-updates-section">
 
+    <div class="appointment-updates-bar">
 
+        <span class="updates-label">
+            Updates :
+        </span>
 
+        <span class="updates-message">
+            Appointments are available as per regular clinic timings.
+        </span>
 
+    </div>
+
+</section>
+
+<section class="appointment-form-section">
+
+    <div class="appointment-form-card">
+
+        <form class="appointment-form">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="DENTAL">Dental Care</option>
+                        <option value="EYE">Eye Care | Optometry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor">Doctor</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="">Select Doctor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointmentDate">Date</label>
+                    <input type="date"
+                           id="appointmentDate"
+                           name="appointmentDate"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeSlot">Time Slot</label>
+                    <select id="timeSlot"
+                            name="timeSlot"
+                            required>
+                        <option value="">Select Time</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="patientName">Full Name</label>
+                    <input type="text"
+                           id="patientName"
+                           name="patientName"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="tel"
+                           id="mobileNumber"
+                           name="mobileNumber"
+                           maxlength="10"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number"
+                           id="age"
+                           name="age"
+                           min="1"
+                           max="120"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender"
+                            name="gender"
+                            required>
+                        <option value="">Select Gender</option>
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="email">Email (Optional)</label>
+                    <input type="email"
+                           id="email"
+                           name="email">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="reason">Reason For Visit</label>
+                    <select id="reason"
+                            name="reason"
+                            required>
+                        <option value="">Select Reason</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="additionalDetails">
+                        Additional Details (Optional)
+                    </label>
+
+                    <textarea id="additionalDetails"
+                              name="additionalDetails"
+                              rows="4"></textarea>
+                </div>
+
+            </div>
+
+            <button type="submit"
+                    class="appointment-submit-btn">
+                Request Appointment
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<section class="appointment-journey-section">
+
+    <div class="journey-card">
+
+        <h2 class="journey-heading">
+            Your Appointment Journey
+        </h2>
+
+        <div class="journey-steps">
+
+            <div class="journey-step">
+                <div class="journey-icon">
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+
+                <h3>Request</h3>
+
+                <p>
+                    Submit your appointment request.
+                </p>
+            </div>
+
+            <div class="journey-arrow">
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+
+            <div class="journey-step">
+                <div class="journey-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <h3>Review</h3>
+
+                <p>
+                    Our team will review and verify your appointment request.
+                </p>
+            </div>
+
+            <div class="journey-arrow">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+
+            <div class="journey-step confirmation-step">
+                <div class="journey-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <h3>Confirmation</h3>
+
+                <p>
+                    We contact you via phone call or WhatsApp.
+                </p>
+            </div>
+
+            <div class="journey-arrow">
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+
+            <div class="journey-step">
+                <div class="journey-icon">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </div>
+
+                <h3>Visit</h3>
+
+                <p>
+                    Visit the clinic at your confirmed appointment time.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="services-section">
+
+     <div class="dental-card">
+
+    <div class="card-title">
+        <div class="title-icon">
+            <i class="fa-solid fa-tooth"></i>
+        </div>
+
+        <div class="title-content">
+            <h2>DENTAL CARE SERVICES</h2>
+            <p>Provided by</p>
+            <h3>Dr. Rajkumar Sharma</h3>
+        </div>
+    </div>
+
+    <div class="dental-grid">
+
+        <div class="rajkumar-services">
+            <ul>
+                <li>Dental Checkups | Consultation</li>
+                <li>Root Canal Treatment</li>
+                <li>Dental Cleaning | Scaling</li>
+                <li>Tooth Extraction</li>
+                <li>Crowns | Caps</li>
+                <li>Dentures | Partials</li>
+                <li>Bridges</li>
+                <li>Gum Treatment</li>
+                <li>Dental Restoration</li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+
+            <div class="tooth-area">
+                <i class="fa-solid fa-tooth"></i>
+            </div>
+
+            <div class="ortho-services">
+                <h4>ORTHODONTIC SERVICES</h4>
+                <p>Provided by</p>
+                <h5>Dr. Sandeep Shrivastav</h5>
+
+                <ul>
+                    <li>Braces Consultation</li>
+                    <li>Teeth Alignment</li>
+                    <li>Orthodontic Evaluation</li>
+                    <li>Smile Correction Planning</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  <div class="eye-card">
+
+    <div class="eye-header">
+
+        <div class="eye-header-icon">
+            <i class="fa-solid fa-eye"></i>
+        </div>
+
+        <div class="eye-header-content">
+            <h2>EYE CARE | OPTOMETRY SERVICES</h2>
+            <p>Provided by</p>
+            <h3>Optom. Harsh Sharma</h3>
+        </div>
+
+    </div>
+
+    <div class="eye-layout">
+
+        <div class="eye-services">
+            <ul>
+                <li>Computerized Eye Testing</li>
+                <li>Vision Assessment</li>
+                <li>Refraction</li>
+                <li>Contact Lens Consultation</li>
+                <li>Scleral Contact Lens Consultation</li>
+                <li>Vision Therapy</li>
+                <li>Retina Screening</li>
+                <li>Cataract Screening</li>
+                <li>Glaucoma Screening</li>
+                <li>Optical Services</li>
+            </ul>
+        </div>
+
+        <div class="eye-icon-side">
+            <i class="fa-solid fa-eye"></i>
+        </div>
+
+    </div>
+
+</div>
+</section>
+<section class="emergency-contact">
+
+    <div class="emergency-left">
+
+        <div class="emergency-icon">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+
+        <div class="emergency-content">
+            <h3>Need Immediate Assistance?</h3>
+            <p>Call us directly for urgent appointments.</p>
+        </div>
+
+    </div>
+
+    <div class="emergency-right">
+
+        <a href="tel:+919829185419" class="emergency-btn">
+            <i class="fa-solid fa-phone"></i>
+            +91 9829185419
+        </a>
+
+    </div>
+
+</section>
+
+    
     <div th:replace="~{fragments/footer :: footer}"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
