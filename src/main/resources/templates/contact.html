@@ -25,9 +25,362 @@
 
     <div th:replace="~{fragments/navbar :: navbar}"></div>
 
+<section class="contact-shloka-section">
+
+    <div class="contact-shloka-card">
+
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="diya-divider">
+
+            <img th:src="@{/images/contact/diya.svg}"
+                 alt="Diya"
+                 class="diya-img">
+
+        </div>
+
+        <h1 class="contact-shloka">
+            सहायः परमो धर्मः सेवा परमं तपः।
+        </h1>
+
+        <p class="contact-shloka-hindi">
+            परोपकार और सहायता करना जीवन का सर्वोच्च धर्म है।
+        </p>
+
+        <p class="contact-shloka-english">
+            Helping others with sincerity and compassion is the highest duty of humanity.
+        </p>
+
+    </div>
+
+</section>
+<section class="quick-contact-section">
+
+    <div class="quick-contact-card call-card">
+        <div class="contact-icon">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+
+        <div class="contact-content">
+            <h3>Call Us</h3>
+            <p>+91 9829185419</p>
+            <p>+91 9588900642</p>
+        </div>
+    </div>
+
+    <div class="quick-contact-card email-card">
+        <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="contact-content">
+            <h3>Email Us</h3>
+            <p>adinath.clinic@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="quick-contact-card location-card">
+        <div class="contact-icon">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div class="contact-content">
+            <h3>Visit Us</h3>
+            <p>Bhawani Mandi</p>
+            <p>Rajasthan</p>
+        </div>
+    </div>
+
+    <div class="quick-contact-card timing-card">
+        <div class="contact-icon">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <div class="contact-content">
+            <h3>Clinic Timing</h3>
+            <p>Mon-Sat : 10 AM - 8 PM</p>
+            <p>Sunday : 10 AM - 5 PM</p>
+        </div>
+    </div>
+
+</section>
+<section class="contact-main-section">
+
+    <!-- Contact Form -->
+
+    <div class="contact-form-card">
+
+        <div class="section-heading">
+            <i class="fa-solid fa-paper-plane"></i>
+            <h2>Send Us a Message</h2>
+        </div>
+
+        <form class="contact-form">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" placeholder="Enter mobile number">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter email address">
+                </div>
+
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Enter subject">
+                </div>
+
+            </div>
+
+            <div class="form-group full-width">
+                <label>Message</label>
+                <textarea rows="6"
+                    placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button class="send-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="clinic-info-card">
+
+        <div class="section-heading">
+            <i class="fa-solid fa-hospital"></i>
+            <h2>Clinic Information</h2>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+                <h4>Call Us</h4>
+                <p>+91 9829185419</p>
+                <p>+91 9588900642</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+                <h4>Email</h4>
+                <p>adinath.clinic@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+                <h4>Address</h4>
+                <p>Bhawani Mandi,<br>Rajasthan</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+                <h4>Clinic Hours</h4>
+                <p>Mon-Sat: 10 AM - 8 PM</p>
+                <p>Sunday: 10 AM - 5 PM</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="location-section">
 
 
+    <div class="section-divider">
+        <span></span>
+    </div>
 
+    <div class="location-banner">
+
+        <div class="location-overlay">
+
+            <div class="clinic-location">
+
+                <h3>
+                    Adinath Dental Clinic &
+                    Eye Care & Optometry Clinic
+                </h3>
+
+                <p>
+                    Bhawani Mandi, Rajasthan - 326502
+                </p>
+
+            </div>
+
+            <a
+                href="https://maps.app.goo.gl/jQcCGb2K9KEruPxT8"
+                target="_blank"
+                class="map-btn">
+
+                <i class="fa-solid fa-location-arrow"></i>
+                Open In Maps
+
+            </a>
+
+        </div>
+
+        <iframe
+            src="https://www.google.com/maps?q=Adinath+Dental+Clinic+Bhawani+Mandi&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+<section class="why-contact-section">
+
+    <div class="why-contact-grid">
+
+        <div class="why-card">
+
+            <div class="why-icon blue">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
+            <h3>APPOINTMENT ASSISTANCE</h3>
+
+            <p>
+                We help you book appointments
+                easily and on time.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon green">
+                <i class="fa-solid fa-tooth"></i>
+            </div>
+
+            <h3>DENTAL CONSULTATION</h3>
+
+            <p>
+                Get guidance for your
+                dental health and treatments.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon blue">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <h3>EYE CARE GUIDANCE</h3>
+
+            <p>
+                Professional advice for your
+                eye care and vision.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon green">
+                <i class="fa-solid fa-file-circle-question"></i>
+            </div>
+
+            <h3>GENERAL ENQUIRIES</h3>
+
+            <p>
+                We're here to answer
+                all your general questions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="faq-section">
+
+    <div class="faq-grid">
+
+        <div class="faq-column">
+
+            <details class="faq-item">
+                <summary>
+                    How do I book an appointment?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+                <p>
+                    Select your department, doctor, preferred date and time, then submit the appointment form. Our team will confirm your appointment.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>
+                    What are the clinic timings?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+                <p>
+                    Monday to Saturday: 10:00 AM – 8:00 PM<br>
+                    Sunday: 10:00 AM – 5:00 PM
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>
+                    Do you accept walk-in patients?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+                <p>
+                    Yes. Walk-in patients are welcome, although appointments are recommended to reduce waiting time.
+                </p>
+            </details>
+
+        </div>
+
+        <div class="faq-column">
+
+            <details class="faq-item">
+                <summary>
+                    Where is Adinath Clinic located?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+                <p>
+                    We are located in Bhawani Mandi, Rajasthan. You can also use the "Open in Maps" button above for navigation.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>
+                    How long does an appointment take?
+                    <i class="fa-solid fa-plus"></i>
+                </summary>
+                <p>
+                    Most consultations take around 20–30 minutes depending on the treatment and doctor's schedule.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
 
     <div th:replace="~{fragments/footer :: footer}"></div>
 
