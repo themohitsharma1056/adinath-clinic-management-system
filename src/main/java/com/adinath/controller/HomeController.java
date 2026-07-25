@@ -21,13 +21,5 @@ public class HomeController {
         return "doctors";
     }
 
-    @GetMapping("/appointment")
-    public String appointment() {
-        return "appointment";
-    }
-
-    @GetMapping("/contact")
-    public String contact() {
-        return "contact";
-    }
+  
 }

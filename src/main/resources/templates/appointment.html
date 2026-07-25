@@ -8,7 +8,21 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Adinath Dental | Eye Care Clinic</title>
+    <title>Book Appointment | Adinath Clinic</title>
+
+    <meta name="description"
+          content="Book your Dental or Eye Care appointment online at Adinath Clinic, Bhawani Mandi. Choose your preferred date and consultation time.">
+
+    <meta name="keywords"
+          content="Book Appointment, Dentist Appointment, Eye Checkup Booking, Clinic Appointment">
+
+    <meta name="author"
+          content="Adinath Clinic">
+
+    <meta name="robots"
+          content="index, follow">
+
+
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,13 +30,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
           rel="stylesheet">
 
-    <link rel="stylesheet"  th:href="@{/css/style.css}">
-     <link rel="stylesheet" th:href="@{/css/appointment.css}">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+    <link rel="stylesheet"
+          th:href="@{/css/appointment.css}">
+
+    <script th:src="@{/js/appointment.js}"></script>
+    <link rel="icon" type="image/svg+xml" th:href="@{/images/favicon.svg}">
+  
 </head>
-
 <body>
-
+<div id="scroll-progress"></div>
     <div th:replace="~{fragments/navbar :: navbar}"></div>
 <section class="appointment-shloka-section">
 
@@ -64,16 +88,20 @@
     </div>
 
 </section>
-<section class="appointment-updates-section">
+<section class="appointment-updates-section"
+         th:if="${activeNotice != null}">
 
     <div class="appointment-updates-bar">
 
         <span class="updates-label">
+
             Updates :
+
         </span>
 
-        <span class="updates-message">
-            Appointments are available as per regular clinic timings.
+        <span class="updates-message"
+              th:text="${activeNotice.message}">
+
         </span>
 
     </div>
@@ -84,116 +112,135 @@
 
     <div class="appointment-form-card">
 
-        <form class="appointment-form">
+    <form class="appointment-form"
+      th:action="@{/appointment/save}"
+      th:object="${appointment}"
+      method="post">
 
-            <div class="form-grid">
+    <div class="form-grid">
 
-                <div class="form-group">
-                    <label for="department">Department</label>
-                    <select id="department" name="department" required>
-                        <option value="">Select Department</option>
-                        <option value="DENTAL">Dental Care</option>
-                        <option value="EYE">Eye Care | Optometry</option>
-                    </select>
-                </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department"
+                    th:field="*{department}"
+                    required>
+                <option value="">Select Department</option>
+                <option value="DENTAL">Dental Care</option>
+                <option value="EYE">Eye Care | Optometry</option>
+            </select>
+        </div>
 
-                <div class="form-group">
-                    <label for="doctor">Doctor</label>
-                    <select id="doctor" name="doctor" required>
-                        <option value="">Select Doctor</option>
-                    </select>
-                </div>
+        <div class="form-group">
+            <label for="doctor">Doctor</label>
+            <select id="doctor"
+                    th:field="*{doctor}"
+                    required>
+                <option value="">Select Doctor</option>
+            </select>
+        </div>
 
-                <div class="form-group">
-                    <label for="appointmentDate">Date</label>
-                    <input type="date"
-                           id="appointmentDate"
-                           name="appointmentDate"
-                           required>
-                </div>
+        <div class="form-group">
+            <label for="appointmentDate">Date</label>
+          <input type="text"
+       id="appointmentDate"
+       th:field="*{appointmentDate}"
+       autocomplete="off"
+       required>
+        </div>
 
-                <div class="form-group">
-                    <label for="timeSlot">Time Slot</label>
-                    <select id="timeSlot"
-                            name="timeSlot"
-                            required>
-                        <option value="">Select Time</option>
-                    </select>
-                </div>
+        <div class="form-group">
+            <label for="timeSlot">Time Slot</label>
+            <select id="timeSlot"
+                    th:field="*{timeSlot}"
+                    required>
+                <option value="">Select Time</option>
+            </select>
+        </div>
 
-                <div class="form-group">
-                    <label for="patientName">Full Name</label>
-                    <input type="text"
-                           id="patientName"
-                           name="patientName"
-                           required>
-                </div>
+        <div class="form-group">
+            <label for="patientName">Full Name</label>
+            <input type="text"
+                   id="patientName"
+                   th:field="*{patientName}"
+                   required>
+        </div>
 
-                <div class="form-group">
-                    <label for="mobileNumber">Mobile Number</label>
-                    <input type="tel"
-                           id="mobileNumber"
-                           name="mobileNumber"
-                           maxlength="10"
-                           required>
-                </div>
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+           <input type="tel"
+                  id="mobileNumber"
+                  th:field="*{mobileNumber}"
+                   maxlength="10"
+                 pattern="[6-9][0-9]{9}"
+               required>
+        </div>
 
-                <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number"
-                           id="age"
-                           name="age"
-                           min="1"
-                           max="120"
-                           required>
-                </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number"
+                   id="age"
+                   min="1"
+                   max="120"
+                   th:field="*{age}"
+                   required>
+        </div>
 
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender"
-                            name="gender"
-                            required>
-                        <option value="">Select Gender</option>
-                        <option value="MALE">Male</option>
-                        <option value="FEMALE">Female</option>
-                        <option value="OTHER">Other</option>
-                    </select>
-                </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender"
+                    th:field="*{gender}"
+                    required>
+                <option value="">Select Gender</option>
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+                <option value="OTHER">Other</option>
+            </select>
+        </div>
 
-                <div class="form-group full-width">
-                    <label for="email">Email (Optional)</label>
-                    <input type="email"
-                           id="email"
-                           name="email">
-                </div>
+        <div class="form-group full-width">
+            <label for="email">Email (Optional)</label>
+            <input type="email"
+                   id="email"
+                   th:field="*{email}">
+        </div>
 
-                <div class="form-group full-width">
-                    <label for="reason">Reason For Visit</label>
-                    <select id="reason"
-                            name="reason"
-                            required>
-                        <option value="">Select Reason</option>
-                    </select>
-                </div>
+        <div class="form-group full-width">
+            <label for="reason">Reason For Visit</label>
+            <select id="reason"
+                    th:field="*{reason}"
+                    required>
+                <option value="">Select Reason</option>
+            </select>
+        </div>
 
-                <div class="form-group full-width">
-                    <label for="additionalDetails">
-                        Additional Details (Optional)
-                    </label>
+        <div class="form-group full-width">
+            <label for="additionalDetails">
+                Additional Details (Optional)
+            </label>
 
-                    <textarea id="additionalDetails"
-                              name="additionalDetails"
-                              rows="4"></textarea>
-                </div>
+            <textarea id="additionalDetails"
+                      rows="4"
+                      th:field="*{additionalDetails}"></textarea>
+        </div>
 
-            </div>
+    </div>
 
-            <button type="submit"
-                    class="appointment-submit-btn">
-                Request Appointment
-            </button>
-
-        </form>
+    <button type="submit"
+            class="appointment-submit-btn">
+        Request Appointment
+    </button>
+    <p th:if="${error}"
+   th:text="${error}"
+   style="color:red;
+          font-weight:bold;
+          text-align:center;
+          margin-top:15px;">
+</p>
+<p th:if="${success}"
+   th:text="${success}"
+   style="color:green;font-weight:bold;text-align:center;margin-top:20px;">
+</p>
+</form>
 
     </div>
 
@@ -401,7 +448,7 @@
     <div th:replace="~{fragments/footer :: footer}"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
+<script th:src="@{/js/main.js}"></script>
 </body>
 
 </html>

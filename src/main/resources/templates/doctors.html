@@ -8,7 +8,21 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Adinath Dental | Eye Care Clinic</title>
+    <title>Our Doctors | Adinath Clinic</title>
+
+    <meta name="description"
+          content="Meet the experienced doctors of Adinath Clinic including our Dental Surgeon and Eye Care & Optometry specialists dedicated to quality patient care.">
+
+    <meta name="keywords"
+          content="Dentist Bhawani Mandi, Eye Doctor, Optometrist, Dental Surgeon, Eye Specialist">
+
+    <meta name="author"
+          content="Adinath Clinic">
+
+    <meta name="robots"
+          content="index, follow">
+
+   
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,13 +30,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
           rel="stylesheet">
 
-    <link rel="stylesheet"  th:href="@{/css/style.css}">
-    <link rel="stylesheet" th:href="@{/css/doctors.css}">
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
 
+    <link rel="stylesheet"
+          th:href="@{/css/doctors.css}">
+    <link rel="icon" type="image/svg+xml" th:href="@{/images/favicon.svg}">
+    
 </head>
 
 <body>
-
+<div id="scroll-progress"></div>
     <div th:replace="~{fragments/navbar :: navbar}"></div>
 <section class="doctor-shloka">
 
@@ -978,7 +996,7 @@ const harshCertificates = [
 	}
 
 </script>
-
+<script th:src="@{/js/main.js}"></script>
 </body>
 
 </html>

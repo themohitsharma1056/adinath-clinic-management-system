@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="confirmModal">
+
+<div id="confirmModal" class="confirm-modal">
+
+    <div class="confirm-box">
+
+        <h3 id="confirmTitle">
+
+            Confirm Action
+
+        </h3>
+
+        <p id="confirmMessage">
+
+            Are you sure you want to continue?
+
+        </p>
+
+        <div class="confirm-buttons">
+
+            <button
+                    type="button"
+                    id="confirmCancel">
+
+                Cancel
+
+            </button>
+
+            <button
+                    type="button"
+                    id="confirmDelete">
+
+                Delete
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</th:block>
+
+</html>

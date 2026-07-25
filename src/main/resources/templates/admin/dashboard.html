@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <meta name="_csrf" th:content="${_csrf.token}">
+<meta name="_csrf_header" th:content="${_csrf.headerName}">
+  <link rel="stylesheet"
+      th:href="@{/css/admin/dashboard.css}">
+      <link rel="icon" type="image/svg+xml" th:href="@{/images/favicon.svg}">
+</head>
+
+<body>
+
+   <header class="dashboard-header">
+
+    <div class="dashboard-logo">
+
+        <img th:src="@{/images/adinath-logo.svg}"
+             alt="Adinath Clinic">
+
+        <div>
+
+            <h1>Adinath Clinic</h1>
+
+            <p>Admin Dashboard</p>
+
+        </div>
+
+    </div>
+
+    <form th:action="@{/logout}" method="post">
+
+        <button type="submit" class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </form>
+
+</header>
+ <section id="overview">
+
+    <h2>Overview</h2>
+
+    <div class="overview-grid">
+
+        <div class="overview-card">
+            <span>Pending Appointments</span>
+            <strong th:text="${pendingCount}"></strong>
+        </div>
+
+        <div class="overview-card">
+            <span>Confirmed Appointments</span>
+            <strong th:text="${confirmedCount}"></strong>
+        </div>
+
+        <div class="overview-card">
+            <span>Completed Appointments</span>
+            <strong th:text="${completedCount}"></strong>
+        </div>
+
+        <div class="overview-card">
+            <span>Today's Appointments</span>
+            <strong th:text="${todayCount}"></strong>
+        </div>
+
+    </div>
+
+</section>
+
+<hr>
+
+ <section id="appointments">
+
+    <h2>Appointments</h2>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="appointmentSearch"
+            placeholder="Search by Patient, Mobile, Doctor, Department or Status...">
+
+    </div>
+
+    <div class="table-wrapper">
+
+        <table class="admin-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Patient</th>
+                    <th>Mobile</th>
+                    <th>Department</th>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr class="appointmentRow"
+                    th:each="appointment : ${appointments}">
+
+                    <td th:text="${appointment.patientName}"></td>
+
+                    <td>
+
+                        <a th:href="'tel:' + ${appointment.mobileNumber}"
+                           th:text="${appointment.mobileNumber}">
+                        </a>
+
+                    </td>
+
+                    <td th:text="${appointment.department}"></td>
+
+                    <td th:text="${appointment.doctor}"></td>
+
+                    <td th:text="${appointment.appointmentDate}"></td>
+
+                    <td th:text="${appointment.timeSlot}"></td>
+
+                    <td th:text="${appointment.reason}"></td>
+
+                    <td th:text="${appointment.status}"></td>
+
+                    <td class="action-column">
+
+                        <a th:href="@{'/admin/appointment/confirm/' + ${appointment.id}}">Confirm</a>
+
+                        <a th:href="@{'/admin/appointment/reject/' + ${appointment.id}}">Reject</a>
+
+                        <a th:href="@{'/admin/appointment/completed/' + ${appointment.id}}">Completed</a>
+
+                       <a class="delete-link" th:href="@{'/admin/appointment/delete/' + ${appointment.id}}">Delete</a>
+
+                        <button
+                                type="button"
+                                class="viewAppointment"
+                                th:attr="data-id=${appointment.id}">
+
+                            View
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<hr>
+<section id="doctorAvailability">
+
+    <h2>Doctor Availability</h2>
+
+    <form id="availabilityForm">
+
+        <input type="hidden" id="availabilityId">
+
+        <div class="availability-grid">
+
+            <div class="form-group">
+
+                <label>Doctor</label>
+
+                <select id="doctorName">
+
+                    <option value="Dr. Rajkumar Sharma">Dr. Rajkumar Sharma</option>
+                    <option value="Harsh Sharma">Harsh Sharma</option>
+                    <option value="Dr. Sandeep Shrivastav">Dr. Sandeep Shrivastav</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Available Date</label>
+
+                <div class="date-box">
+
+                    <input type="date" id="availableDate">
+
+                    <button type="button" id="addDate">
+
+                        Add Date
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="form-group full-width">
+
+                <label>Selected Dates</label>
+
+                <div id="selectedDates"></div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Start Time</label>
+
+                <input type="time" id="startTime">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>End Time</label>
+
+                <input type="time" id="endTime">
+
+            </div>
+
+            <div class="form-group checkbox-group">
+
+                <label>
+
+                    <input type="checkbox"
+                           id="available"
+                           checked>
+
+                    Available
+
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="availability-buttons">
+
+            <button type="button"
+                    id="saveAvailability">
+
+                Save Availability
+
+            </button>
+
+            <button type="button"
+                    id="cancelEdit">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </form>
+
+    <hr>
+
+    <h3>Saved Availability</h3>
+
+    <div class="table-wrapper">
+
+        <table class="admin-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="availabilityTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<hr>
+
+
+<section id="contactMessages">
+
+    <h2>Contact Messages</h2>
+
+    <p class="message-count">
+
+        Total Messages :
+
+        <strong th:text="${contactCount}"></strong>
+
+    </p>
+
+    <div class="table-wrapper">
+
+        <table class="admin-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Date | Time</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr th:each="contact : ${contacts}">
+
+                    <td th:text="${contact.fullName}"></td>
+
+                    <td>
+
+                        <a th:href="'tel:' + ${contact.mobileNumber}"
+                           th:text="${contact.mobileNumber}">
+                        </a>
+
+                    </td>
+
+                    <td th:text="${contact.email}"></td>
+
+                    <td th:text="${contact.subject}"></td>
+
+                    <td class="message-column"
+                        th:text="${contact.message}">
+                    </td>
+
+                    <td th:text="${#temporals.format(contact.submittedAt,'dd MMM yyyy, hh:mm a')}"></td>
+
+                    <td class="contact-action">
+
+                      <a class="delete-link"
+   th:href="@{'/admin/contact/delete/' + ${contact.id}}">
+
+    Delete
+
+</a>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+ <section id="notice">
+
+    <h2>Notice Board</h2>
+
+    <form th:action="@{/admin/notice/save}" method="post" class="notice-form">
+
+        <textarea
+                name="message"
+                placeholder="Write clinic notice here..."
+                required
+                th:text="${activeNotice != null ? activeNotice.message : ''}">
+        </textarea>
+
+        <button type="submit">
+
+            Save Notice
+
+        </button>
+
+    </form>
+
+    <div class="active-notice"
+         th:if="${activeNotice != null}">
+
+        <h3>Current Active Notice</h3>
+
+        <div class="notice-card">
+
+            <p th:text="${activeNotice.message}"></p>
+
+            <small>
+
+                Last Updated :
+
+                <span th:text="${#temporals.format(activeNotice.updatedAt,'dd MMM yyyy hh:mm a')}"></span>
+
+            </small>
+
+            <a class="delete-link"
+   th:href="@{'/admin/notice/delete/' + ${activeNotice.id}}">
+
+    Delete Notice
+
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<hr>
+
+<section id="settings">
+
+    <h2>Admin Settings</h2>
+
+    <div class="settings-grid">
+
+        <div class="settings-card">
+
+            <h3>Change Username</h3>
+
+            <form th:action="@{/admin/settings/username}" method="post">
+
+                <label>New Username</label>
+
+                <input
+                        type="text"
+                        name="username"
+                        required>
+
+                <button type="submit">
+
+                    Update Username
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="settings-card">
+
+            <h3>Change Password</h3>
+
+            <form th:action="@{/admin/settings/password}" method="post">
+
+                <label>Current Password</label>
+
+                <input
+                        type="password"
+                        name="currentPassword"
+                        required>
+
+                <label>New Password</label>
+
+                <input
+                        type="password"
+                        name="newPassword"
+                        minlength="8"
+                        required>
+
+                <label>Confirm Password</label>
+
+                <input
+                        type="password"
+                        name="confirmPassword"
+                        minlength="8"
+                        required>
+
+                <button type="submit">
+
+                    Update Password
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+<div id="appointmentModal"
+     style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.55);
+        z-index:9999;
+        overflow-y:auto;
+        padding:30px 15px;">
+
+    <div style="
+    background:#fff;
+    width:650px;
+    max-width:100%;
+    margin:auto;
+    border-radius:12px;
+    padding:25px;
+    max-height:90vh;
+    overflow-y:auto;
+    box-sizing:border-box;">
+
+        <h2>Patient Details</h2>
+
+        <hr>
+
+        <p><b>Name :</b> <span id="viewName"></span></p>
+
+        <p><b>Mobile :</b>
+            <a id="viewMobile"></a>
+        </p>
+
+        <p><b>Email :</b>
+            <span id="viewEmail"></span>
+        </p>
+
+        <p><b>Age :</b>
+            <span id="viewAge"></span>
+        </p>
+
+        <p><b>Gender :</b>
+            <span id="viewGender"></span>
+        </p>
+
+        <p><b>Department :</b>
+            <span id="viewDepartment"></span>
+        </p>
+
+        <p><b>Doctor :</b>
+            <span id="viewDoctor"></span>
+        </p>
+
+        <p><b>Date :</b>
+            <span id="viewDate"></span>
+        </p>
+
+        <p><b>Time :</b>
+            <span id="viewTime"></span>
+        </p>
+
+        <p><b>Reason :</b>
+            <span id="viewReason"></span>
+        </p>
+
+        <p><b>Additional Details :</b></p>
+
+        <textarea
+            id="viewDetails"
+            rows="4"
+            style="width:100%;"
+            readonly>
+        </textarea>
+
+        <br><br>
+
+        <button
+            type="button"
+            id="closeModal">
+
+            Close
+
+        </button>
+
+    </div>
+
+</div>
+<div id="toast" class="toast-message">
+
+    <span id="toastText"></span>
+
+</div>
+<script th:src="@{/js/admin.js}"></script>
+<div th:replace="~{fragments/confirm-modal :: confirmModal}"></div>
+<script th:src="@{/js/admin-confirm.js}"></script>
+
+</body>
+
+</html>

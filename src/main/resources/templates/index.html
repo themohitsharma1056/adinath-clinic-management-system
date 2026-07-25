@@ -2,16 +2,93 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adinath Healthcare Center</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Adinath Clinic | Dental & Eye Care Centre | Bhawani Mandi
+    </title>
+
+    <meta name="description"
+          content="Adinath Clinic in Bhawani Mandi provides Dental Care, Eye Care and Optometry services including Root Canal Treatment, Teeth Cleaning, Vision Testing, Contact Lens, Spectacles and General Dental Consultation.">
+
+    <meta name="keywords"
+          content="Adinath Clinic, Dental Clinic Bhawani Mandi, Eye Care Bhawani Mandi, Optometrist Rajasthan, Dentist Rajasthan, Vision Test, Contact Lens, Root Canal Treatment, Teeth Cleaning, Eye Testing">
+
+    <meta name="author"
+          content="Adinath Clinic">
+
+    <meta name="robots"
+          content="index,follow">
+
+    <meta name="theme-color"
+          content="#18469B">
+
+    <meta name="format-detection"
+          content="telephone=no">
+
+    <meta name="application-name"
+          content="Adinath Clinic">
+
+    <meta name="generator"
+          content="Spring Boot">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:site_name"
+          content="Adinath Clinic">
+
+    <meta property="og:title"
+          content="Adinath Clinic | Dental & Eye Care Centre">
+
+    <meta property="og:description"
+          content="Professional Dental Care, Eye Care and Optometry services in Bhawani Mandi, Rajasthan.">
+
+    <meta property="og:locale"
+          content="en_IN">
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="Adinath Clinic">
+
+    <meta name="twitter:description"
+          content="Dental Care, Eye Care & Optometry Centre in Bhawani Mandi.">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link rel="dns-prefetch"
+          href="//fonts.googleapis.com">
+
+    <link rel="dns-prefetch"
+          href="//cdnjs.cloudflare.com">
+
     <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+   <link rel="icon" type="image/svg+xml" th:href="@{/images/favicon.svg}">
+
 </head>
 
 <body>
+<div id="scroll-progress"></div>
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <section class="shloka-section">
@@ -490,7 +567,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         <div class="contact-item location-item">
 
-            <a href="https://maps.app.goo.gl/jQcCGb2K9KEruPxT8"
+            <a href="https://maps.app.goo.gl/Phjo3SoKSCmFkBUK7?g_st=ac"
                target="_blank"
                class="contact-icon">
 
@@ -577,5 +654,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </section>
 <div th:replace="~{fragments/footer :: footer}"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/main.js}"></script>
 </body>
 </html>
